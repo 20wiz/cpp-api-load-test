@@ -1,0 +1,21 @@
+###  8080
+
+POST http://localhost:8080/send
+Content-Type: application/json
+
+{
+    "message": "Your message here"
+}
+
+###  
+
+POST http://localhost:8090/send
+Content-Type: application/json
+
+{
+    "message": "Your message here"
+}
+
+###  
+
+GET http://localhost:8090/count
