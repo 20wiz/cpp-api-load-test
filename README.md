@@ -1,4 +1,8 @@
 
+# Purpose
+This repository demonstrates how to build and run a C++ server inside a Docker container. It includes examples of sending messages using curl, building and running the Docker container, and performing load tests using Locust and Apache Benchmark (ab).
+
+The Apache Benchmark(ab) test was conducted with 1000 requests and got 13617 RPS(Requests per second). 
 
 ## send message by curl
 ```sh
@@ -25,7 +29,7 @@ python -m locust -f locustfile.py
 #### result
 ```sh
  $ ab -n 1000 -c 10 -p post_data.json -T application/json http://localhost:8090/send
- 
+
 This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
