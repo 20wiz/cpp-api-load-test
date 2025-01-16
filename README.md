@@ -7,7 +7,7 @@ curl -X POST http://localhost:8090/send -H "Content-Type: application/json" -d '
 
 ### docker build
 ```sh
-cd /home/tesla/dev/cpp-api
+cd cpp-api
 docker build -t cpp-api .
 docker run -d -p 8090:8090 cpp-api
 ```
@@ -25,6 +25,7 @@ python -m locust -f locustfile.py
 #### result
 ```sh
  $ ab -n 1000 -c 10 -p post_data.json -T application/json http://localhost:8090/send
+ 
 This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
